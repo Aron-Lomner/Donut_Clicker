@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    font-family: "Roboto";
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: bisque;
+}
+
+#logo {
+    border-right: 3px solid;
+    border-bottom: 3px solid;
+}
+
+#navbar a {
+    color: brown;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 15px;
+}
+
+buttons a {
+    margin: 0px 10px 0px 10px;
+}
