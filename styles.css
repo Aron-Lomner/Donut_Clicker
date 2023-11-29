@@ -34,3 +34,8 @@
     background-image: url("/assets/donut.png");
     background-size: cover;
 }
+#donut_container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
