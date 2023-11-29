@@ -28,17 +28,23 @@ function buy(item) {
     gameState.donuts -= item.price;
     item.price *= 1.1;
     update();
+    playChaChing();
   } else {
     // notEnoughMonyAnimate()
   }
 }
-
 function update() {
   clickerCount.innerText = `${gameState.clicker.count.toFixed(2)} clickers`;
   multiplyCount.innerText = `${gameState.multiplier.count.toFixed(
     2
   )} multipliers`;
   donutCount.innerText = `${gameState.donuts.toFixed(2)} donuts`;
+  buyClickBtn.querySelector(
+    "p"
+  ).innerText = `Price: ${gameState.clicker.price.toFixed(2)} 🍩`;
+  buyMultiplierBtn.querySelector(
+    "p"
+  ).innerText = `Price: ${gameState.multiplier.price.toFixed(2)} 🍩`;
 }
 
 function autoClick() {
@@ -46,6 +52,11 @@ function autoClick() {
   setTimeout(() => {
     autoClick();
   }, 1000);
+}
+
+function playChaChing() {
+  audio = new Audio("/assets/cha-ching.mp3");
+  audio.play();
 }
 autoClick();
 
