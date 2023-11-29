@@ -34,9 +34,11 @@ function buy(item) {
 }
 
 function update() {
-  clickerCount.innerText = `${gameState.clicker.count} clickers`;
-  multiplyCount.innerText = `${gameState.multiplier.count} multipliers`;
-  donutCount.innerText = `${gameState.donuts} donuts`;
+  clickerCount.innerText = `${gameState.clicker.count.toFixed(2)} clickers`;
+  multiplyCount.innerText = `${gameState.multiplier.count.toFixed(
+    2
+  )} multipliers`;
+  donutCount.innerText = `${gameState.donuts.toFixed(2)} donuts`;
 }
 
 function autoClick() {
@@ -46,6 +48,7 @@ function autoClick() {
   }, 1000);
 }
 autoClick();
+
 donut.onclick = () => {
   updateDonutCount(1);
 };
