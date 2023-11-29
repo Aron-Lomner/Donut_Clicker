@@ -30,7 +30,11 @@ function buy(item) {
     update();
     playSound("/assets/cha-ching.mp3");
   } else {
-    // notEnoughMonyAnimate()
+    const text = document.getElementById("not_enough");
+    text.style.opacity = 1;
+    setTimeout(() => {
+      text.style.opacity = 0;
+    }, 1000);
   }
 }
 function update() {
