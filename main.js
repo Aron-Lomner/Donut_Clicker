@@ -18,7 +18,7 @@ const clickerCount = document.getElementById("clicker_count");
 const multiplyCount = document.getElementById("multiply_count");
 
 function updateDonutCount(clicks) {
-  gameState.donuts += clicks * (1 + 1.2 ** gameState.multiplier.count);
+  gameState.donuts += clicks * 1.2 ** gameState.multiplier.count;
   update();
 }
 
@@ -39,6 +39,13 @@ function update() {
   donutCount.innerText = `${gameState.donuts} donuts`;
 }
 
+function autoClick() {
+  updateDonutCount(gameState.clicker.count);
+  setTimeout(() => {
+    autoClick();
+  }, 1000);
+}
+autoClick();
 donut.onclick = () => {
   updateDonutCount(1);
 };
