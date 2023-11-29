@@ -1,10 +1,10 @@
 var gameState = {
   donuts: 0,
-  clickers: = {
+  clickers: {
     count: 0,
     price: 1
   },
-  multipliers: = {
+  multipliers: {
     count: 0,
     price: 1
   },
