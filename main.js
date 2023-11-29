@@ -7,7 +7,7 @@ var gameState = {
   multiplier: {
     count: 0,
     price: 10,
-  },
+  }
 };
 
 const donut = document.getElementById("donut");
