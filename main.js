@@ -32,13 +32,18 @@ function buy(item) {
     // notEnoughMonyAnimate()
   }
 }
-
 function update() {
   clickerCount.innerText = `${gameState.clicker.count.toFixed(2)} clickers`;
   multiplyCount.innerText = `${gameState.multiplier.count.toFixed(
     2
   )} multipliers`;
   donutCount.innerText = `${gameState.donuts.toFixed(2)} donuts`;
+  buyClickBtn.querySelector(
+    "p"
+  ).innerText = `Price: ${gameState.clicker.price.toFixed(2)} 🍩`;
+  buyMultiplierBtn.querySelector(
+    "p"
+  ).innerText = `Price: ${gameState.multiplier.price.toFixed(2)} 🍩`;
 }
 
 function autoClick() {
@@ -47,6 +52,7 @@ function autoClick() {
     autoClick();
   }, 1000);
 }
+
 autoClick();
 
 donut.onclick = () => {
