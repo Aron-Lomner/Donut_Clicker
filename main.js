@@ -11,7 +11,7 @@ const donutCount = document.getElementById("donut_count");
 const buyClickBtn = document.getElementById("buy_click_btn");
 const buyMultiplierBtn = document.getElementById("buy_multiplier_btn");
 const clickerCount = document.getElementById("clicker_count");
-const multiplyCount = document.getElementById("mutiply_count");
+const multiplyCount = document.getElementById("multiply_count");
 
 function updateDonutCount(clicks) {
   gameState.donuts += clicks * (1 + 1.2 ** multipliers);
