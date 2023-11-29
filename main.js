@@ -1,10 +1,18 @@
 var gameState = {
   donuts: 0,
+<<<<<<< HEAD
+  clickers: {
+=======
   clicker: {
+>>>>>>> de385b6f5d75c04a826241c595cdb636e271a049
     count: 0,
     price: 10,
   },
+<<<<<<< HEAD
+  multipliers: {
+=======
   multiplier: {
+>>>>>>> de385b6f5d75c04a826241c595cdb636e271a049
     count: 0,
     price: 10,
   },
