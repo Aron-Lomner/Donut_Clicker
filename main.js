@@ -1,12 +1,20 @@
 var gameState = {
   donuts: 0,
+<<<<<<< HEAD
   clickers: {
+=======
+  clicker: {
+>>>>>>> de385b6f5d75c04a826241c595cdb636e271a049
     count: 0,
-    price: 1
+    price: 10,
   },
+<<<<<<< HEAD
   multipliers: {
+=======
+  multiplier: {
+>>>>>>> de385b6f5d75c04a826241c595cdb636e271a049
     count: 0,
-    price: 1
+    price: 10,
   },
 };
 
@@ -18,21 +26,39 @@ const clickerCount = document.getElementById("clicker_count");
 const multiplyCount = document.getElementById("multiply_count");
 
 function updateDonutCount(clicks) {
-  gameState.donuts += clicks * (1 + 1.2 ** multipliers);
-  donutCount.innerText = `${gameState.donuts} donuts`;
+  gameState.donuts += clicks * 1.2 ** gameState.multiplier.count;
+  update();
 }
+
 function buy(item) {
-  if (gameState.donuts >= item.price) {
-    gameState.clickers += 1;
-    gameState.donuts -= clickPrice;
-    item.price*=1.1;
+  if (item.price <= gameState.donuts) {
+    item.count += 1;
+    gameState.donuts -= item.price;
+    item.price *= 1.1;
+    update();
   } else {
     // notEnoughMonyAnimate()
   }
 }
 
+function update() {
+  clickerCount.innerText = `${gameState.clicker.count.toFixed(2)} clickers`;
+  multiplyCount.innerText = `${gameState.multiplier.count.toFixed(
+    2
+  )} multipliers`;
+  donutCount.innerText = `${gameState.donuts.toFixed(2)} donuts`;
+}
+
+function autoClick() {
+  updateDonutCount(gameState.clicker.count);
+  setTimeout(() => {
+    autoClick();
+  }, 1000);
+}
+autoClick();
+
 donut.onclick = () => {
   updateDonutCount(1);
 };
-
-buyClickBtn.onclick = buyClick("click");
+buyClickBtn.onclick = () => buy(gameState.clicker);
+buyMultiplierBtn.onclick = () => buy(gameState.multiplier);
