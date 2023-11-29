@@ -28,6 +28,7 @@ function buy(item) {
     gameState.donuts -= item.price;
     item.price *= 1.1;
     update();
+    playChaChing();
   } else {
     // notEnoughMonyAnimate()
   }
@@ -53,6 +54,10 @@ function autoClick() {
   }, 1000);
 }
 
+function playChaChing() {
+  audio = new Audio("/assets/cha-ching.mp3");
+  audio.play();
+}
 autoClick();
 
 donut.onclick = () => {
