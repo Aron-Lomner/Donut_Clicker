@@ -28,7 +28,7 @@ function buy(item) {
     gameState.donuts -= item.price;
     item.price *= 1.1;
     update();
-    playSound("/assets/cha-ching.mp3");
+    playSound("assets/cha-ching.mp3");
   } else {
     const text = document.getElementById("not_enough");
     text.style.opacity = 1;
@@ -65,7 +65,7 @@ function playSound(soundPath) {
 autoClick();
 
 donut.onclick = () => {
-  playSound("/assets/mouse_click.mp3");
+  playSound("assets/mouse_click.mp3");
   updateDonutCount(1);
 };
 buyClickBtn.onclick = () => buy(gameState.clicker);
