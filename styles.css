@@ -55,6 +55,7 @@ button {
     /* font-weight: 600; */
     font-size: 16px;
     color: brown;
+    margin-top: 10px;
 }
 
 button p {

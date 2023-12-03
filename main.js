@@ -3,12 +3,16 @@ var gameState = {
   clicker: {
     count: 0,
     price: 10,
+    multiplyBy: 0.1,
   },
   multiplier: {
     count: 0,
     price: 10,
-  }
+    multiplyBy: 0.1,
+  },
 };
+// clone game state, this is neccessary as gameStart = gameState would just point to gameState
+const gameStart = JSON.parse(JSON.stringify(gameState));
 
 const donut = document.getElementById("donut");
 const donutCount = document.getElementById("donut_count");
@@ -16,9 +20,12 @@ const buyClickBtn = document.getElementById("buy_click_btn");
 const buyMultiplierBtn = document.getElementById("buy_multiplier_btn");
 const clickerCount = document.getElementById("clicker_count");
 const multiplyCount = document.getElementById("multiply_count");
+const restartBtn = document.getElementById("restart_btn");
 
 function updateDonutCount(clicks) {
-  gameState.donuts += clicks * 1.2 ** gameState.multiplier.count;
+  gameState.donuts +=
+    clicks * 1 +
+    clicks * gameState.multiplier.multiplyBy * gameState.multiplier.count;
   update();
 }
 
@@ -52,7 +59,7 @@ function update() {
 }
 
 function autoClick() {
-  updateDonutCount(gameState.clicker.count);
+  updateDonutCount(gameState.clicker.count * gameState.clicker.multiplyBy);
   setTimeout(() => {
     autoClick();
   }, 1000);
@@ -70,3 +77,8 @@ donut.onclick = () => {
 };
 buyClickBtn.onclick = () => buy(gameState.clicker);
 buyMultiplierBtn.onclick = () => buy(gameState.multiplier);
+restartBtn.onclick = () => {
+  console.log(gameStart);
+  gameState = JSON.parse(JSON.stringify(gameStart));
+  update();
+};
