@@ -1,11 +1,5 @@
 # Donut_Clicker
 
-### Assignment - Donut Maker
-
-**Logo:** [WCCI We Can Code IT square](<insert logo link here>)
-
-[Accept assignment in Github Classroom](<insert GitHub Classroom link here>)
-
 #### Donut Maker - A tribute to Cookie Clicker
 
 Welcome to Fred the Baker Baking Company! You've been contracted by Fred the Baker Baking Company to take a concept, Donut Maker Clicker, from the drawing board to the browser. Fred is ready to retire and wants a game that uses button clicks to create virtual donuts for the world to enjoy. However, his requirements for 'Auto Clickers' and 'Donut Multipliers' are a bit eccentric.
