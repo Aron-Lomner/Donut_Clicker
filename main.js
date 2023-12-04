@@ -41,15 +41,15 @@ function buy(item) {
     text.style.opacity = 1;
     setTimeout(() => {
       text.style.opacity = 0;
-    }, 1000);
+    }, 3000);
   }
 }
 function update() {
-  clickerCount.innerText = `${gameState.clicker.count.toFixed(2)} clickers`;
+  clickerCount.innerText = `${gameState.clicker.count.toFixed(2)} Clickers`;
   multiplyCount.innerText = `${gameState.multiplier.count.toFixed(
     2
-  )} multipliers`;
-  donutCount.innerText = `${gameState.donuts.toFixed(2)} donuts`;
+  )} Multipliers`;
+  donutCount.innerText = `${gameState.donuts.toFixed(2)} Donuts`;
   buyClickBtn.querySelector(
     "p"
   ).innerText = `Price: ${gameState.clicker.price.toFixed(2)} 🍩`;
