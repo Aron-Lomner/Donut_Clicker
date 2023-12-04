@@ -2,7 +2,11 @@
 
 #### Donut Maker - A tribute to Cookie Clicker
 
-Welcome to Fred the Baker Baking Company! You've been contracted by Fred the Baker Baking Company to take a concept, Donut Maker Clicker, from the drawing board to the browser. Fred is ready to retire and wants a game that uses button clicks to create virtual donuts for the world to enjoy. However, his requirements for 'Auto Clickers' and 'Donut Multipliers' are a bit eccentric.
+This is a practice project for the fictional Fred the Baker Baking Company to take a concept, Donut Maker Clicker, from the drawing board to the browser. Fred is ready to retire and wants a game that uses button clicks to create virtual donuts for the world to enjoy. However, his requirements for 'Auto Clickers' and 'Donut Multipliers' are a bit eccentric.
+
+
+
+<i>The following content is taken from our instruction.</i>
 
 #### The Application Requirements
 
