@@ -1,6 +1,13 @@
+:root {
+    --color1: rgb(255, 109, 206);
+    --color2: #ff6969;
+    --body: hsl(0, 47%, 89%);
+    --navbar: rgb(255, 235, 193);
+    --text_box: antiquewhite;
+}
+
 * {
     margin: 0;
-    font-family: "Roboto";
 }
 
 /* navbar */
@@ -8,16 +15,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: bisque;
+    font-family: "Yanone Kaffeesatz";
+    background-color: var(--navbar);
+    font-size: 25px;
+    border-bottom-left-radius: 25px;
 }
 
 #logo {
     border-right: 3px solid;
     border-bottom: 3px solid;
+    border-radius: 25px;
 }
 
 #navbar a {
-    color: brown;
+    color: var(--color2);
     text-decoration: none;
     font-weight: 700;
     padding: 15px;
@@ -25,6 +36,12 @@
 
 #buttons a {
     margin: 0px 10px 0px 10px;
+}
+
+/* Body */
+body {
+    background-color: var(--body);
+    font-family: "Yanone Kaffeesatz";
 }
 
 /* main section */
@@ -49,13 +66,15 @@
 
 button {
     background-color: bisque;
-    border: 2px solid brown;
+    border: 2px solid var(--color2);
     height: 45px;
     width: 150px;
-    /* font-weight: 600; */
+    font-family: "Yanone Kaffeesatz";
+    font-weight: 800;
     font-size: 16px;
-    color: brown;
+    color: var(--color2);
     margin-top: 10px;
+    border-radius: 16px;
 }
 
 button p {
@@ -66,10 +85,13 @@ button p {
 #not_enough {
     opacity: 0;
     transition: opacity .3s ease;
-}
-
-#not_enough {
     background-color: #f0d6d6;
     border: 2px solid brown;
     padding: .5%;
+}
+#donut_count {
+    margin-top: 10px;
+}
+.count {
+    color: #ff6969;
 }

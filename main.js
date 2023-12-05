@@ -45,10 +45,8 @@ function buy(item) {
   }
 }
 function update() {
-  clickerCount.innerText = `${gameState.clicker.count.toFixed(2)} Clickers`;
-  multiplyCount.innerText = `${gameState.multiplier.count.toFixed(
-    2
-  )} Multipliers`;
+  clickerCount.innerText = `${gameState.clicker.count} Clickers`;
+  multiplyCount.innerText = `${gameState.multiplier.count} Multipliers`;
   donutCount.innerText = `${gameState.donuts.toFixed(2)} Donuts`;
   buyClickBtn.querySelector(
     "p"
